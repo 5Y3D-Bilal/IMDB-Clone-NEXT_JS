@@ -2,6 +2,7 @@ import { League_Spartan } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Provider from "./ThemeProvider";
+import NavBar from "@/components/NavBar";
 
 const iLeague_Spartannter = League_Spartan({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <body className={iLeague_Spartannter.className}>
         <Provider>
           <Header />
+          <NavBar />
           {children}
         </Provider>
       </body>
