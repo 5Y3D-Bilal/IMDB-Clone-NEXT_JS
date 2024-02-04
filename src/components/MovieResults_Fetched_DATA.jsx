@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function MovieResults_Fetched_DATA({ results }) {
-    // console.log(results)
+  // console.log(results)
   return (
     <div>
       {results.map((result) => (
