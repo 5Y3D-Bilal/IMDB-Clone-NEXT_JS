@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
+
 export default async function MovieDetailsPage({ params }) {
   const movieId = params.id;
   const res = await fetch(
