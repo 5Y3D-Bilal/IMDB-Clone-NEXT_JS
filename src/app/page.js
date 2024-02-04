@@ -1,9 +1,18 @@
-import React from 'react'
+import MovieResults_Fetched_DATA from "@/components/MovieResults_Fetched_DATA"
 
-export default function page() {
+const API_Key = process.env.API_KEY
+
+export default async function page({ searchParams }) {
+  const genre = searchParams.genre || 'fetchTrending'
+  const res = await fetch(`https://api.themoviedb.org/3${genre === 'fetchTopRated' ? '/movie/top_rated' : '/trending/all/week'}?api_key=${API_Key}&language=en-US&page=1`)
+  const data = await res.json()
+  if (!res.ok) {
+    throw new Error('Something went worng')
+  }
+  const results = data.results
   return (
     <div>
-      Home Page
+      <MovieResults_Fetched_DATA results={results} />
     </div>
   )
 }
