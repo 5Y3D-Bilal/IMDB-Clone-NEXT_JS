@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Provider from "./ThemeProvider";
 import NavBar from "@/components/NavBar";
+import Searchbox from "@/components/Searchbox";
 
 const iLeague_Spartannter = League_Spartan({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <Header />
           <NavBar />
+          <Searchbox />
           {children}
         </Provider>
       </body>
