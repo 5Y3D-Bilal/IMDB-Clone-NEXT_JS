@@ -20,7 +20,7 @@ export default function DarkModeSwitcher() {
         (currentTheme === "dark" ? (
           <MdSunny
             onClick={() => setTheme("light")}
-            className="text-xl cursor-pointer hover:text-amber-500 hover:scale-110 duration-500"
+            className="text-xl cursor-pointer hover:text-amber-500 hover:scale-110 duration-500 sunIcon"
           />
         ) : (
           //   else the theme is dark use dark(Moon) icon
